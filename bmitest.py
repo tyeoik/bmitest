@@ -14,6 +14,14 @@ st.markdown("""
     .main {
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     }
+    .stNumberInput input {
+        color: #333 !important;
+        font-weight: bold;
+    }
+    .stNumberInput label {
+        color: white !important;
+        font-weight: bold;
+    }
     .stButton>button {
         width: 100%;
         background: linear-gradient(90deg, #FF6B6B 0%, #FFE66D 100%);
@@ -133,16 +141,12 @@ st.markdown("<br>", unsafe_allow_html=True)
 col1, col2 = st.columns(2)
 
 with col1:
-    st.markdown("<div class='metric-card'>", unsafe_allow_html=True)
     st.markdown("### 🔢 키 (cm)")
     height = st.number_input("키를 입력하세요", min_value=100, max_value=250, value=170, step=1, label_visibility="collapsed")
-    st.markdown("</div>", unsafe_allow_html=True)
 
 with col2:
-    st.markdown("<div class='metric-card'>", unsafe_allow_html=True)
     st.markdown("### ⚖️ 몸무게 (kg)")
     weight = st.number_input("몸무게를 입력하세요", min_value=30, max_value=200, value=65, step=1, label_visibility="collapsed")
-    st.markdown("</div>", unsafe_allow_html=True)
 
 st.markdown("<br>", unsafe_allow_html=True)
 
